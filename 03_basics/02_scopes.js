@@ -33,3 +33,20 @@ if (true) {
     // console.log(website);
 }
 // console.log(userName);
+
+// ++++++++++++++++++  interesting  +++++++++++++++++++++++++++
+
+console.log(addOne(4)) // this will call
+
+function addOne(num1) {
+    return num1 + 1;
+}
+
+addOne(4) // this will call
+
+// addTwo(3) // returns an error
+const addTwo = function (num2) {
+    return num2 + 2;
+}
+
+addTwo(3) // this will call
