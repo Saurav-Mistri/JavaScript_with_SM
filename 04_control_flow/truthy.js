@@ -29,3 +29,29 @@
 // } else {
 //     console.log("Object is not empty!");
 // }
+
+// console.log(false == 0)
+
+// console.log(false == '');
+
+// console.log(0 == '');
+
+// Nullish Coalescing Operator (??):null/undefined
+
+// let val1;
+
+// val1 = 5 ?? 10
+// val1 = null ?? 10
+// val1 = undefined ?? 13
+// val1 = null ?? 10 ?? 30
+
+// console.log(val1);
+
+// Terniary Operator
+
+// syntax
+// condition ? true : false
+
+const iceCreamPrice = 500
+
+iceCreamPrice <= 250 ? console.log("Less than 250!") : console.log("Greater than 250!")
