@@ -6,7 +6,7 @@
 
 # Solution code
 
-## project 1
+## Project 1
 
 ```javascript
 console.log("Project 1 solution code")
@@ -33,7 +33,7 @@ buttons.forEach((button) => {
 
 ```
 
-## project 2 solution
+## Project 2 solution
 
 ```javascript
 
@@ -67,5 +67,18 @@ form.addEventListener('submit', function (event) {
     }
   }
 });
+
+```
+
+## Project 3 solution
+
+```javascript
+
+const clock = document.getElementById('clock');
+
+setInterval(function () {
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
 
 ```
