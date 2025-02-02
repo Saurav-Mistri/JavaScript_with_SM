@@ -6,7 +6,7 @@
 
 # Solution code
 
-## Project 1: Theme Switcher
+## Project 1 Theme Switcher
 
 ```javascript
 console.log("Project 1 solution code")
@@ -33,7 +33,7 @@ buttons.forEach((button) => {
 
 ```
 
-## Project 2: BMI Calculator
+## Project 2 BMI Calculator
 
 ```javascript
 
@@ -70,7 +70,7 @@ form.addEventListener('submit', function (event) {
 
 ```
 
-## Project 3: Digital Clock
+## Project 3 Digital Clock
 
 ```javascript
 
@@ -82,7 +82,7 @@ setInterval(function () {
 }, 1000);
 
 ```
-## Project 4: Guess the Number
+## Project 4 Guess the Number
 
 ```javascript
 
@@ -179,7 +179,7 @@ function newGame() {
 ```
 
 
-## Project 5: Generate Random Color
+## Project 5 Generate Random Color
 
 ```javascript
 
