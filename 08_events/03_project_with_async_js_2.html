@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>MR SM</h1>
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+    <div id="result"></div>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      let result = `<br><span>${str} ${Date.now()}</span>`;
+      document.querySelector("#result").innerHTML = result;
+    };
+
+    let intervalId;
+    const startInterval = function () {
+      intervalId = setInterval(sayDate, 1000, "Hi");
+    };
+    const stopInterval = function () {
+      clearInterval(intervalId);
+    };
+    const startButton = document
+      .querySelector("#start")
+      .addEventListener("click", startInterval);
+    const stopButton = document
+      .querySelector("#stop")
+      .addEventListener("click", stopInterval);
+  </script>
+</html>
