@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img width="200px" id="photoshop" src="https://w7.pngwing.com/pngs/670/371/png-transparent-adobe-photoshop-logo-thumbnail.png" alt="photoshop" />
+        </li>
+        <li>
+          <img width="200px" id="japan" src="https://assets1.ignimgs.com/vid/thumbnails/user/2013/12/31/japanimg.jpg" alt="" />
+        </li>
+        <li>
+          <img width="200px" id="river" src="https://i.pinimg.com/736x/36/e9/8b/36e98bd97ad59953da4c7474b95529bc.jpg" alt="" />
+        </li>
+        <li>
+          <img width="200px" id="owl" src="https://live.staticflickr.com/7008/6493073345_9a78958b1b_b.jpg" alt="" />
+        </li>
+        <li>
+          <img width="200px" id="prayer" src="https://rogerknowlton.com/wp-content/uploads/2022/07/blog_post.png" alt="" />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google">Google</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // Do not use below-mentioned approach because this 1 gives you a limited features
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl');
+    // }
+
+    // attachEvent();
+    
+    // jQuery - on
+    
+    //type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // this called event bubbling
+    // this call top-to-bottom
+    // document.getElementById('images').addEventListener('click', function(event){
+    //     console.log("Clicked inside the ul!")
+    // }, true)
+    // // this called event capturing
+    // // this call bottom-to-top
+    // document.getElementById('owl').addEventListener('click', function(event){
+    //     console.log("Clicked owl!");
+    //     event.stopPropagation();
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log('Google link clicked!');
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName == 'IMG'){
+            console.log(e.target.tagName);
+            
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+            // removeIt.parentNode.removeChild(removeIt)
+        }
+    },false);
+  </script>
+</html>
