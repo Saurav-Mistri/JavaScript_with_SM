@@ -21,10 +21,13 @@
 
     let intervalId;
     const startInterval = function () {
-      intervalId = setInterval(sayDate, 1000, "Hi");
+      if (!intervalId) {
+        intervalId = setInterval(sayDate, 1000, "Hi");
+      }
     };
     const stopInterval = function () {
       clearInterval(intervalId);
+      intervalId = null;
     };
     const startButton = document
       .querySelector("#start")
